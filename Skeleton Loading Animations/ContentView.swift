@@ -71,6 +71,26 @@ struct Card: Identifiable {
     var description: String
 }
 
+extension Card {
+    static var mock: Card {
+        .init(
+            image: "wwdc25",
+            title: "World Wide Developer Conference 2025",
+            subTitle: "From June 9th 2025",
+            description: "Be there for the reveal of the latest Apple tools, frameworks, and features. Learn to elevate your apps and games through video sessions hosted by Apple engineers and designers."
+        )
+    }
+    
+    static var cardData: Card {
+        .init(
+            image: "wwdc25",
+            title: "World Wide Developer Conference 2025",
+            subTitle: "From June 9th 2025",
+            description: "Be there for the reveal of the latest Apple tools, frameworks, and features. Learn to elevate your apps and games through video sessions hosted by Apple engineers and designers.Be there for the reveal of the latest Apple tools, frameworks, and features. Learn to elevate your apps and games through video sessions hosted by Apple engineers and designers.Be there for the reveal of the latest Apple tools, frameworks, and features. Learn to elevate your apps and games through video sessions hosted by Apple engineers and designers."
+        )
+    }
+}
+
 struct SomeCardView: View {
     var card: Card?
     var body: some View {
